@@ -1,0 +1,16 @@
+﻿@page
+@model Demo.Pages.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <div>Name:<input asp-for="Customer.Name"></div>
+    <div>Email:<input asp-for="Customer.Email"></div>
+    <span asp-validation-for="Customer.Email"></span>
+    <input type="submit" asp-page-handler="Create" value="Create" />
+  
+</form>
+
